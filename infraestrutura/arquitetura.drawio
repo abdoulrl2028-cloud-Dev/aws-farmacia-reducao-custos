@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2025-12-05T10:00:00.000Z" agent="5.0" version="23.0">
+  <diagram name="AWS Farmácia - Redução de Custos" id="c4acf3407a81eab1fdac3296d2a8e577">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Internet Gateway -->
+        <mxCell id="2" value="Internet Gateway" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF9900;fontColor=white;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- CloudFront -->
+        <mxCell id="3" value="CloudFront&#xa;(CDN)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF9900;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- S3 Static Content -->
+        <mxCell id="4" value="S3 Bucket&#xa;(Frontend)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#569297;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- ALB -->
+        <mxCell id="5" value="Application&#xa;Load Balancer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF9900;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Lambda Functions -->
+        <mxCell id="6" value="Lambda&#xa;(Produtos)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF9900;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="200" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="7" value="Lambda&#xa;(Pedidos)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF9900;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="300" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="8" value="Lambda&#xa;(Usuarios)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF9900;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- DynamoDB -->
+        <mxCell id="9" value="DynamoDB&#xa;(Produtos)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#527FFF;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="550" y="200" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="10" value="DynamoDB&#xa;(Pedidos)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#527FFF;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="550" y="300" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- RDS (Aurora Serverless) -->
+        <mxCell id="11" value="Aurora Serverless&#xa;(Usuarios)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#27AE60;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="550" y="400" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- SQS -->
+        <mxCell id="12" value="SQS&#xa;(Fila Pedidos)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF9900;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="800" y="300" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- EventBridge -->
+        <mxCell id="13" value="EventBridge&#xa;(Orquestração)" style="rounded=0;whiteSpace=wrap;html=1;fillColor:#FF9900;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="800" y="150" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- CloudWatch -->
+        <mxCell id="14" value="CloudWatch&#xa;(Logs &amp; Metrics)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF9900;fontColor=white;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1050" y="100" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Connections -->
+        <mxCell id="15" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="17" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="2" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="18" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="5" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="5" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="20" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="5" target="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="21" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="6" target="9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="22" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="7" target="10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="23" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="8" target="11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="24" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="7" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="25" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="13" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="26" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="13" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="27" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="6" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

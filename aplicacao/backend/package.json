@@ -1,0 +1,27 @@
+{
+  "name": "farmacia-api",
+  "version": "1.0.0",
+  "description": "API Serverless para Farmácia com Redução de Custos AWS",
+  "main": "lambda-produtos.py",
+  "scripts": {
+    "dev": "sam local start-api",
+    "deploy": "serverless deploy --stage dev",
+    "deploy:prod": "serverless deploy --stage prod",
+    "remove": "serverless remove --stage dev",
+    "logs": "serverless logs -f listarProdutos --stage dev --tail",
+    "offline": "serverless offline start"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "serverless",
+    "farmacia"
+  ],
+  "author": "seu-nome",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "^3.38.0",
+    "serverless-python-requirements": "^6.0.0",
+    "serverless-offline": "^13.2.0"
+  }
+}
